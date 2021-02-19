@@ -1,3 +1,35 @@
-<h1>HTML stuff goes here </h1>
+<!DOCTYPE html>
+<html>
+<script src="{{url_for('static', filename='signup.css')}}"> </script>
+<body>
+<div class = "login-box">
+
+  <form  name="login_user" action="/login_user" method="POST" class="modal-content">
+    <div class="container">
+      <h2 name="name" value = "Username">Data here</h2>
+      <hr>
+      <div class="user-box">
+      <input type="text" placeholder="Enter Username" name="Username" required>
+      </div>
+      <div class="user-box">
+
+      <input type="password" placeholder="Enter Password" name="pswrd" required>
+      </div>
+      <p><a href="#" >Click here to signup if user</a></p>
 
 
+      <div class="clearfix">
+      
+
+        <a>      <span></span>      <span></span>
+      <span></span>
+      <span></span><button type="submit" >Sign In</button></a>
+
+        <br>
+        <br>
+      </div>
+    </div>
+  </form>
+</div>
+</body>
+</html>
