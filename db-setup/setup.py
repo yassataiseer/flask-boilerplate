@@ -14,3 +14,6 @@ class db_builder:
         database = self.database
         )
         return("succesfully connected")
+
+p1 = db_builder("localhost","root","new_password","test")
+print(p1.connect())
