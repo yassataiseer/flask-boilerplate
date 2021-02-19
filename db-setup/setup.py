@@ -13,7 +13,12 @@ class db_builder:
         passwd = self.passwd,
         database = self.database
         )
-        return("succesfully connected")
-
+        return db
+    def mk_table(self, table_name,variable_query):
+        mydb = db_builder.connect(self)
+        mycursor = mydb.cursor()
+        mycursor.execute("CREATE TABLE "+table_name+"("+variable_query+")")
+        return "succesfuly made table"
 p1 = db_builder("localhost","root","new_password","test")
 print(p1.connect())
+print(p1.mk_table("User","Name VARCHAR(255), Password VARCHAR(255)"))
