@@ -20,8 +20,27 @@ class db_builder:
         mycursor.execute("CREATE TABLE "+table_name+"("+variable_query+")")
         return "succesfuly made table"
         mycursor.close()
-    def insrt_data(self, table, values):
-        pass
-p1 = db_builder("localhost","root","new_password","test")
+
+
+'''
+FILE SETUP
+
+FIRST GRAB THE FOLLOWWING CREDENETIALS FROM YOUR MYSQLS DB:
+-HOST(e.g Localhost)
+-USER
+-PASSWORD
+-DATABASE NAME
+
+MAKING TABLES (mk_table)
+-IN ORDER TO MAKE TABLES
+-USAGE SHOULD LOOK LIKE THIS:
+mk_table("Table_Name","Query of columns along with format(e.g INT or VARCHAR)")
+'''
+
+
+'''
+Testcases to be used
+p1 = db_builder("localhost","root","password","test")
 print(p1.connect())
 print(p1.mk_table("User","Name VARCHAR(255), Password VARCHAR(255)"))
+'''
